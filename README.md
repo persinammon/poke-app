@@ -1,6 +1,6 @@
 # Pokémon Social App
 
-This web application allows users to sign up and play Pokémon.
+This web application allows users to sign up and play competitively with Pokémon.
 
 ### Functionality
 
@@ -19,6 +19,7 @@ This web application allows users to sign up and play Pokémon.
 - CORS
 - Socket.io
 - Chai test framework
+- Webpack build tool to manage website assets
 - [PokéAPI](https://pokeapi.co/)
 
 Middleware:
@@ -44,20 +45,35 @@ node --version
 2. Install packages using `npm`.
 
 ```
-npm install express cors body-parser reload
-npm install -g nodemon
+cd server
+npm i express cors body-parser mongodb dotenv
+cd ../client
+npm i react react-dom path ts-loader typescript webpack webpack-cli bootstrap react-router-dom
+npm i -g nodemon
 ```
 
-3. Run using `node` or `nodemon`. `nodemon` automatically restarts server upon saved changes to local code.
+Note that PokéAPI does not require developer credentials for use.
+
+3. Create a MongoDB database following this [tutorial](https://www.mongodb.com/docs/atlas/getting-started/).
+3. Create a `config.env` in `server` with the URI from MongoDB. Sample URI below. 
+
+```
+ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/employees?retryWrites=true&w=majority
+PORT=8000
+```
+
+4. Run using `node` or `nodemon`. `nodemon` automatically restarts server upon saved changes to local code.
 
 ```
 nodemon server.js
 ```
 
-4. Navigate to `localhost:8000` to interact with web application.
+5. Navigate to `localhost:8000` to interact with web application.
 
-5. Use `curl` to test endpoints. Example that tests out a default POST request to home page:
+6. Use `curl` to test endpoints. Example that tests out a default POST request to home page:
 
 ```
 curl -X POST http://localhost:8000
 ```
+
+
