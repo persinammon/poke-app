@@ -91,6 +91,10 @@ tournaments to sign up for, and button to get a new pokemon
 
 For modifying team resources, `socket.io` is used for real-time collaboration.
 
+One end goal is to set up deployment to GCP K8s, then connect that to a CI/CD pipeline in Github.
+These instructions on local Kubernetes deployment is my current progress:
+https://www.digitalocean.com/community/tutorials/how-to-migrate-a-docker-compose-workflow-to-kubernetes
+
 ### Running Locally in Docker
 
 To start the services:
