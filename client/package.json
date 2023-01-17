@@ -4,11 +4,17 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.12.1",
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
     "create-react-app": "^5.0.1",
+    "framer-motion": "^8.4.6",
     "path": "^0.12.7",
     "prop-type": "^0.0.1",
     "react": "^18.2.0",
@@ -21,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm dist/*.js && webpack --config webpack.config.js",
+    "build": "rm dist/*.js && rm dist/*.woff2 && rm dist/*.woff && webpack --config webpack.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

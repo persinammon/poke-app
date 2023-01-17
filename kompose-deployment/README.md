@@ -1,0 +1,1 @@
+These files were created by `kompose`, meant to allow using Docker compose with Kubernetes.
