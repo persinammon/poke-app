@@ -4,8 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 `npm run eject` was run to give full control of build tools.
 
-Make sure to install `sass` if you wish to write `.scss` files.
-
 ## Available Scripts
 
 In the project directory, you can run:

@@ -18,7 +18,7 @@ This web application allows users to sign up and play competitively with Pokémo
 - MongoDB
 - CORS
 - Socket.io
-- Chai test framework
+- Chakra-UI
 - Webpack to manage website assets
 - [PokéAPI](https://pokeapi.co/)
 
@@ -31,9 +31,6 @@ Middleware:
 `GET /`
 - Fetches landing page with account creation and login options
 - Request arguments: None
-
-`POST /`
-- Creates a new trainer or logs in
 
 `GET /home`
 - Fetches home page populated by trainers to create team with and
