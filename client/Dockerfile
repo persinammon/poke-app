@@ -1,13 +1,12 @@
-FROM node:16
+FROM node:18-alpine
 
-WORKDIR /src/client/app
-COPY package*.json ./
-
-RUN npm install
-# RUN npm ci --only=production
-
+WORKDIR /app
 COPY . .
-EXPOSE 8000
 
-ENTRYPOINT [ "node", "server.js" ]
+# RUN npm install --omit=dev
+RUN npm ci --only=production
+
+EXPOSE 3000
+
+ENTRYPOINT [ "npm", "start" ]
 
