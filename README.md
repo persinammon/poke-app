@@ -91,6 +91,20 @@ tournaments to sign up for, and button to get a new pokemon
 
 For modifying team resources, `socket.io` is used for real-time collaboration.
 
+### Running Locally in Docker
+
+To start the services:
+
+```
+docker compose up -d
+```
+
+To end the services and clean up containers:
+
+```
+docker compose down
+```
+
 ### Local Development Setup
 
 1. Install Node.js on local computer. Check installation:
@@ -118,36 +132,17 @@ client-side: react react-dom path ts-loader typescript webpack webpack-cli boots
 
 Note that PokéAPI does not require developer credentials to use.
 
-3. Create a MongoDB database following this [tutorial](https://www.mongodb.com/docs/atlas/getting-started/).
-
-4. Create a `config.env` in `server` with the URI from MongoDB. Sample URI below. 
-
-```
-ATLAS_URI=mongodb+srv://<username>:<password>@cluster0-yyarb.mongodb.net/<database>?retryWrites=true&w=majority
-
-PORT=8000
-```
-
-5. Run using `node` or `nodemon`. `nodemon` automatically restarts server upon saved changes to local code.
+3. Run using `node` or `nodemon`. `nodemon` automatically restarts server upon saved changes to local code.
 
 ```
 nodemon server.js
 ```
 
-6. Navigate to `localhost:8000` to interact with web application.
+4. Navigate to `localhost:8000` to interact with web application.
 
-7. Use `curl` to test endpoints. Example that tests out a default POST request to home page:
+5. Use `curl` to test endpoints. Example that tests out a default POST request to home page:
 
 ```
 curl -X POST http://localhost:8000
 ```
 
-### Running Locally in Docker
-
-```
-docker compose up -d
-```
-
-```
-docker compose down
-```

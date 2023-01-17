@@ -20,10 +20,13 @@ services:
       - db
   db:
     image: mongo
-    # volumes:
-    #   - ./data:data/db
+    volumes:
+      - data:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
     expose:
       - 27017
+
+volumes:
+  data:
