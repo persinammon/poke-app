@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
-//const Db = process.env.ATLAS_URI;
-const Db = process.env.ME_CONFIG_MONGODB_URL;
+const Db = process.env.ATLAS_URI;
+//const Db = process.env.ME_CONFIG_MONGODB_URL; //for docker services login
 const client = new MongoClient(Db, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
