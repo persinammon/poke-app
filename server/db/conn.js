@@ -1,6 +1,11 @@
 const { MongoClient } = require("mongodb");
+
+/* For development, using a Cloud MongoDB cluster set up through MongoDB Atlas.
+   For production, plan on using a Docker container with mongodb installed. */
 const Db = process.env.ATLAS_URI;
 //const Db = process.env.ME_CONFIG_MONGODB_URL; //for docker services login
+
+
 const client = new MongoClient(Db, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

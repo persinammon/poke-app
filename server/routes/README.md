@@ -1,0 +1,1 @@
+These routes use MongoDB data access. They are modularized by type of model being accessed and page being accessed (in the case of home page). All database access is implemented in this folder.
