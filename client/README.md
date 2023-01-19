@@ -2,7 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-`npm run eject` was run to give full control of build tools.
+`npm run eject` was run to give full control of build tools, and then
+Webpack was installed to handle bundling of `.scss`, `.css`, and `.js` files.
 
 ## Available Scripts
 
@@ -25,8 +26,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Originally builds and bundles using `react-scripts`. 
 Decided to change to `webpack` configured for JavaScript, CSS, and Sass for learning experience.
-
-Here is the Meta section for [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+.
 
 ### `npm run eject`
 
@@ -48,13 +48,11 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
 ### Making a Progressive Web App
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+Interested in implementing this after basic functionality is complete.
 
 ### Advanced Configuration
 
@@ -64,6 +62,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

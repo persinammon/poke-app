@@ -1,12 +1,13 @@
 # Pokémon Social App
 
 This web application allows users to sign up and play competitively with Pokémon.
+It is currently being built.
 
 ### Functionality
 
 1. Create a trainer account with a unique ID. 
 2. Send a real-time request to another trainer to form a team.
-3. Collaboratively create a team roster of 6 pokémon.
+3. Collaboratively create a team roster of 6 pokémon in real-time.
 3. Search and enter tournaments.
 4. Host a tournament with grand prize.
 
@@ -19,22 +20,21 @@ This web application allows users to sign up and play competitively with Pokémo
 - CORS
 - Socket.io
 - Chakra-UI
-- Webpack to manage website assets
+- Webpack to bundle website assets
 - [PokéAPI](https://pokeapi.co/)
 
 Middleware:
-- Body-parser
+- Body-parser to access body of POST requests
 
 
 ### API Endpoints
 
 `GET /`
-- Fetches landing page with account creation and login options
-- Request arguments: None
+- Fetches landing page with account creation/login option through Auth0
 
 `GET /home`
-- Fetches home page populated by trainers to create team with and
-tournaments to sign up for, and button to get a new pokemon
+- Fetches home page populated by trainers to create team with and tournaments to sign up for, and button
+to get a new pokemon or item
 
 `GET /pokemon?page=<page_number>`
 - Fetches the data of all pokemon
@@ -48,7 +48,7 @@ tournaments to sign up for, and button to get a new pokemon
 `GET /trainer/<id>`
 - Fetches the data of a trainer
 - Request arguments: None
-- Returns a JSON with keys X
+- Returns a JSON with trainer stats
 
 `GET /trainer/<id>/pokemon`
 - Fetches data for trainer to view their pokemon
@@ -88,9 +88,11 @@ tournaments to sign up for, and button to get a new pokemon
 
 For modifying team resources, `socket.io` is used for real-time collaboration.
 
+For creating React components, functions and hooks were used over classes, after 
+reading [this article](https://overreacted.io/how-are-function-components-different-from-classes/).
+
 One end goal is to set up deployment to GCP K8s, then connect that to a CI/CD pipeline in Github.
-These instructions on local Kubernetes deployment are my current progress:
-https://www.digitalocean.com/community/tutorials/how-to-migrate-a-docker-compose-workflow-to-kubernetes
+These [instructions](https://www.digitalocean.com/community/tutorials/how-to-migrate-a-docker-compose-workflow-to-kubernetes) on local Kubernetes deployment are my current progress.
 
 ### Running Locally in Docker
 
