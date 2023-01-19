@@ -1,13 +1,16 @@
 $font-stack: Helvetica, sans-serif;
 $primary-color: rgb(234, 190, 243);
 
-@import '@fontsource/roboto/300.css';
-@import '@fontsource/roboto/400.css';
-@import '@fontsource/roboto/500.css';
-@import '@fontsource/roboto/700.css';
-
-
 body {
   font: 100% $font-stack;
   background-color: $primary-color;
+}
+
+.landing {
+  align-items: center;
+  justify-content: center;
+}
+
+.hideme {
+  display: none;
 }

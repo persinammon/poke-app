@@ -5,6 +5,7 @@ services:
     image: frontend:latest
     ports:
       - 3000:3000
+    restart: always
     depends_on:
       - backend
   backend:
@@ -16,6 +17,7 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://root:example@db:27017/
     ports:
       - 8000:8000
+    restart: always
     depends_on:
       - db
   db:
@@ -27,6 +29,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     expose:
       - 27017
+    restart: always
 
 volumes:
   data:

@@ -1,1 +1,1 @@
-This folder is for mounting a volume of MongoDB data, which is done by running `docker-compose.yml`.
+This folder is for mounting a volume of MongoDB data, which is done by running `docker compose up`.
