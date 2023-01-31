@@ -19,18 +19,9 @@ It is currently being built.
 - MongoDB
 - Socket.io
 - Chakra-UI
-<<<<<<< HEAD
-- Webpack to bundle website assets
-- [PokéAPI](https://pokeapi.co/)
-
-Middleware:
-- Body-parser to access body of POST requests
-
-=======
 - Webpack to bundle assets
 - [PokéAPI](https://pokeapi.co/)
 - Full list of middleware accessible through reading `server/server.js` and `server/routes/*.js`
->>>>>>> main
 
 ### API Endpoints
 
@@ -115,12 +106,8 @@ For creating React components, functions and hooks were used over classes, after
 reading [this article](https://overreacted.io/how-are-function-components-different-from-classes/).
 
 One end goal is to set up deployment to GCP K8s, then connect that to a CI/CD pipeline in Github.
-<<<<<<< HEAD
-These [instructions](https://www.digitalocean.com/community/tutorials/how-to-migrate-a-docker-compose-workflow-to-kubernetes) on local Kubernetes deployment are my current progress.
-=======
 These instructions on local Kubernetes deployment are my current progress:
 https://www.digitalocean.com/community/tutorials/how-to-migrate-a-docker-compose-workflow-to-kubernetes
->>>>>>> main
 
 ### Running Locally in Docker
 
