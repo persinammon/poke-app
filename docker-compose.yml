@@ -24,12 +24,15 @@ services:
     image: mongo
     volumes:
       - data:/data/db
+      - ./mongosetup.js:/docker-entrypoint-initdb.d/mongosetup.js
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: pokemon
     expose:
       - 27017
     restart: always
 
 volumes:
   data:
+  .:

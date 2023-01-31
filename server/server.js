@@ -1,8 +1,16 @@
-// Require dependencies
-const bodyParser = require('body-parser');
+// DEPENDENCIES
+
+// express.js framework
 const express = require('express');
-const cors = require('cors');
+
+// this is for passing environment variables during development
+// (no docker container running) - currently unused 
 require("dotenv").config({ path: "./config.env" });
+
+// need this to parse HTTP requests
+const bodyParser = require('body-parser');
+
+const cors = require('cors');
 const port = process.env.PORT || 8000;
 const dbo = require("./db/conn");
 const http = require('http');
@@ -10,7 +18,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-// Start up an instance of app
+// start up instance of app
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -39,7 +47,7 @@ io.on('connection', (socket) => {
 });
   
 server.listen(port, ()=>{
-    // Database access is here to check that it was successful, usage in routes folder
+    // access database to log successful connection
     dbo.connectToServer(function (err) {
       if (err) console.error(err);
     });
