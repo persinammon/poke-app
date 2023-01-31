@@ -13,10 +13,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = process.env.PORT || 8000;
 const dbo = require("./db/conn");
-const http = require('http');
-const server = http.createServer(app);
-const { Server } = require("socket.io");
-const io = new Server(server);
 
 // start up instance of app
 const app = express();
@@ -24,6 +20,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+
 
 /* Routes */
 // Use const res = await fetch('url'), process.env.BASE_URL
