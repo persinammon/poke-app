@@ -17,15 +17,20 @@ It is currently being built.
 - Express.js
 - React.js
 - MongoDB
-- CORS
 - Socket.io
 - Chakra-UI
+<<<<<<< HEAD
 - Webpack to bundle website assets
 - [PokéAPI](https://pokeapi.co/)
 
 Middleware:
 - Body-parser to access body of POST requests
 
+=======
+- Webpack to bundle assets
+- [PokéAPI](https://pokeapi.co/)
+- Full list of middleware accessible through reading `server/server.js` and `server/routes/*.js`
+>>>>>>> main
 
 ### API Endpoints
 
@@ -84,6 +89,24 @@ to get a new pokemon or item
 
 ### Data Models
 
+There are five classes - trainers, pokemon, items, tournaments, teams.<br />
+-> = owns<br />
+
+Trainers -> pokemon -> items (fed by trainer)<br />
+         -> tournaments<br />
+         -> teams<br />
+         -> items<br />
+         
+Admin trainer -> Tournaments -> List of trainers<br />
+
+
+Teams -> Two trainers<br />
+      -> Up to six pokemon<br />
+      
+Many to many relationship between trainers and teams,<br />
+One to many relationship between trainers and Pokemon,<br />
+One to many relationship between trainers/pokemon and items,<br />
+
 ### Note on App Features
 
 For modifying team resources, `socket.io` is used for real-time collaboration.
@@ -92,7 +115,12 @@ For creating React components, functions and hooks were used over classes, after
 reading [this article](https://overreacted.io/how-are-function-components-different-from-classes/).
 
 One end goal is to set up deployment to GCP K8s, then connect that to a CI/CD pipeline in Github.
+<<<<<<< HEAD
 These [instructions](https://www.digitalocean.com/community/tutorials/how-to-migrate-a-docker-compose-workflow-to-kubernetes) on local Kubernetes deployment are my current progress.
+=======
+These instructions on local Kubernetes deployment are my current progress:
+https://www.digitalocean.com/community/tutorials/how-to-migrate-a-docker-compose-workflow-to-kubernetes
+>>>>>>> main
 
 ### Running Locally in Docker
 
@@ -126,13 +154,6 @@ npm i
 npm i -g nodemon
 ```
 
-The following dependencies should be installed.
-
-```
-server-side: express cors body-parser mongodb dotenv socket.io
-client-side: react react-dom path ts-loader typescript webpack webpack-cli bootstrap react-router-dom
-```
-
 Note that PokéAPI does not require developer credentials to use.
 
 3. Run using `node` or `nodemon`. `nodemon` automatically restarts server upon saved changes to local code.
@@ -141,11 +162,13 @@ Note that PokéAPI does not require developer credentials to use.
 nodemon server.js
 ```
 
-4. Navigate to `localhost:8000` to interact with web application.
+4. Navigate to `localhost:3000` to interact with web application.
 
-5. Use `curl` to test endpoints. Example that tests out a default POST request to home page:
+5. Use `curl` to test endpoints. Examples:
 
 ```
-curl -X POST http://localhost:8000
+curl -d @test/testcase.json -H "Content-Type: application/json" http://localhost:8000
+curl -v http://localhost:8000
+curl -v http://localhost:3000
 ```
 
