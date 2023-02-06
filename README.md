@@ -1,7 +1,7 @@
 # Pokémon Social App
 
 This web application allows users to sign up, create teams, and collaboratively
-create team rosters.
+create team rosters. 
 
 ### Dependencies
 
@@ -54,7 +54,9 @@ npm i
 
 For development, a cloud MongoDB database was used, requiring developer credentials.
 PokéAPI has no required credentials or rate limiting.
-For deployment, switch to containerized MongoDB db instance. A version 5 of `react-router-dom` was used.
+For deployment, switch to containerized MongoDB db instance. 
+The server is stateless, allowing for scalability assuming
+databases are replicated.
 
 3. Run using `node` or `nodemon`. `nodemon` allows for hot deployment, or automatic server restart on code changes.
 Both are included in the `npm` scripts defined in `package.json`.

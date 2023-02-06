@@ -3,6 +3,8 @@ import React from 'react';
 import AuthenticationButton from '../components/authentication-button';
   
 const LandingPage = () => {
+
+
   return (
     <span class="landing">
     <p>Welcome to Pokémon!</p> 

@@ -21,10 +21,11 @@ import './stylesheets/site-style.scss';
 
  
 const App = () => {
+
  return (
   <div>
     <div>
-     <MainMenu class="hideme" />
+     <MainMenu />
      </div>
      <div>
       <Routes>
