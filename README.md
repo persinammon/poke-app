@@ -54,7 +54,7 @@ npm i
 
 For development, a cloud MongoDB database was used, requiring developer credentials.
 PokéAPI has no required credentials or rate limiting.
-For deployment, switch to containerized MongoDB db instance.
+For deployment, switch to containerized MongoDB db instance. A version 5 of `react-router-dom` was used.
 
 3. Run using `node` or `nodemon`. `nodemon` allows for hot deployment, or automatic server restart on code changes.
 Both are included in the `npm` scripts defined in `package.json`.

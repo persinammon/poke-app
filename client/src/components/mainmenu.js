@@ -14,7 +14,7 @@ import {
   Button,
   useDisclosure
 } from '@chakra-ui/react'
-import LogoutButton from "./logout";
+import AuthenticationButton from "./authentication-button";
  
 //set prop for trainer/<id>/pokemon
 function MainMenu() {
@@ -31,11 +31,11 @@ function MainMenu() {
         <DrawerContent>
           <DrawerHeader borderBottomWidth='1px'>Menu</DrawerHeader>
           <DrawerBody>
-            <NavLink to="/home">Home</NavLink><br />
-            <NavLink to="/profile">Player Profile</NavLink><br />
-            <NavLink to="/trainer/<id>/pokemon">Pokemon</NavLink><br />
-            <NavLink to="/trainer/<id>/teams">Teams</NavLink><br />
-            <LogoutButton /><br />
+            <NavLink to="home">Home</NavLink><br />
+            <NavLink to="profile">Player Profile</NavLink><br />
+            <NavLink to="mypokemon">Pokemon</NavLink><br />
+            <NavLink to="myteams">Teams</NavLink><br />
+            <AuthenticationButton /><br />
             <DrawerCloseButton /><br />
           </DrawerBody>
         </DrawerContent>
