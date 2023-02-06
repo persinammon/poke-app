@@ -1,23 +1,24 @@
 import React from "react";
  
-// We use Route in order to define the different routes of our application
-import {BrowserRouter as Router, Route, Routes, Redirect} from "react-router-dom";
-import AuthenticationButton from "./components/authentication-button";
+import { Route, Routes, Navigate } from "react-router-dom";
  
-// We import all the components we need in our app
-import LoginButton from "./components/login";
-import MainMenu from "./components/mainmenu";
-// Import site wide styling
-import './stylesheets/site-style.scss';
 
+import MainMenu from "./components/mainmenu";
 
 import Home from "./pages/home";
 import Profile from "./pages/profile";
-import PlayerPokemon from "./pages/player-pokemon";
-import PlayerTeam from "./pages/player-team";
+import {  PlayerPokemon, PlayerTeam }  from "./pages/player-stats";
+import { PokemonParent, TrainerParent, TeamParent } from "./pages/parents";
 import ErrorPage from "./pages/error-page";
 import LandingPage from "./pages/landing-page";
 import ViewPokemon from "./pages/all-pokemon";
+import Pokemon from "./pages/pokemon"
+import Trainer from "./pages/trainer"
+import Team from "./pages/team"
+import CreateTeam from  "./pages/create-team"
+
+import './stylesheets/site-style.scss';
+
  
 const App = () => {
  return (
@@ -33,18 +34,21 @@ const App = () => {
         <Route path="mypokemon" element={<PlayerPokemon />} />
         <Route path="myteams" element={<PlayerTeam />} />
         <Route path="*" element={<ErrorPage />} />
-        <Route path="pokemon" element={<Redirect to="/home" />}>
-          <Route path="all" element={<ViewPokemon />} />
-          <Route path="all/:pageID" element={<ViewPokemon />} />
-          <Route path=":pokemonID" element={<Pokemon />} />
+        <Route exact path="pokemon" element={<PokemonParent />}> 
+          <Route index element={<Navigate to="/home" />} />
+          <Route exact path="all" element={<ViewPokemon />} />
+          <Route exact path="all/:pageID" element={<ViewPokemon />} />
+          <Route exact path=":pokemonID" element={<Pokemon />} />
         </Route>
-        <Route path="trainer" element={<Redirect to="/home" />}>
-          <Route path=":trainerID" element={<Trainer />} />
+        <Route exact path="trainer" element={<TrainerParent />}>
+          <Route index element={<Navigate to="/home" />} />
+          <Route exact path=":trainerID" element={<Trainer />} />
           <Route path=":trainerID/pokemon" element={<ViewPokemon />} />
         </Route>
-        <Route path="team" element={<Redirect to="/home" />}>
+        <Route exact path="team" element={<TeamParent />}>
+          <Route index element={<Navigate to="/home" />} />
+          <Route exact path="create" element={<CreateTeam />} />
           <Route path=":teamID" element={<Team />} />
-          <Route path="create" element={<CreateTeam />} />
         </Route>
       </Routes>
      </div>

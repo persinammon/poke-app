@@ -16,7 +16,7 @@ const Profile = () => {
         <p>{user.email}</p>
       </div>
     )
-  );
-};
+  )
+}
 
 export default Profile;

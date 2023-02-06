@@ -10,7 +10,7 @@ const LandingPage = () => {
     <AuthenticationButton />
    </span>
 
-  );
-};
+  )
+}
   
 export default LandingPage;
