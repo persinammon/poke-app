@@ -1,7 +1,7 @@
 import React from "react";
   
 // We import NavLink to utilize the react router.
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import {
   Drawer,
@@ -20,6 +20,11 @@ import AuthenticationButton from "./authentication-button";
 function MainMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [placement, setPlacement] = React.useState('left')
+
+
+  if (useLocation().pathname == "/") {
+    return null
+  }
 
   return (
     <>
@@ -43,4 +48,5 @@ function MainMenu() {
     </>
   )
 }
+
 export default MainMenu;
