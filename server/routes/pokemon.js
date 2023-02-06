@@ -1,9 +1,11 @@
 const express = require('express')
 const router = express.Router()
 const dbo = require("../db/conn");
+var cors = require('cors')
+
 
 router.get('/', (req, res) => {
-    res.redirect('/all/1')
+    res.redirect('/all')
 })
 
 router.get('/all', (req, res) => {

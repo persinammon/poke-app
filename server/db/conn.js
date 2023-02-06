@@ -1,20 +1,15 @@
-// modularized and exported so routes and main server can share
+/* REFACTOR ME */
 
-// REFACTOR ME
+const MongoClient = require('mongodb').MongoClient;
 
-
-const { MongoClient } = require("mongodb");
-
-/* For development, using a Cloud MongoDB cluster set up through MongoDB Atlas.
-   For production, plan on using a Docker container with mongodb installed. */
-const Db = process.env.ATLAS_URI;
+/* For development, use a Cloud MongoDB cluster set up through MongoDB Atlas.
+   For production, use a Docker container with mongodb installed for better security
+   (don't want URI in multiple containers). */
+const uri = process.env.ATLAS_URI;
 //const Db = process.env.ME_CONFIG_MONGODB_URL; //for docker services login
 
 
-const client = new MongoClient(Db, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const client = new MongoClient(uri, {useNewUrlParser: true});
  
 var _db;
  

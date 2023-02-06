@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const dbo = require("../db/conn");
+var cors = require('cors')
+
 
 router.route('/:teamId')
     .get((req, res) => {

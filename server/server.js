@@ -13,6 +13,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = process.env.PORT || 8000;
 const dbo = require("./db/conn");
+const populate = require("./db/populate");
+
 
 // start up instance of app
 const app = express();
@@ -22,7 +24,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // set to accept incoming requests for any origin, across all endpoints
+// for prod, delete this  
 app.use(cors());
+
 app.use(express.json());
 
 const http = require('http');
@@ -48,11 +52,8 @@ app.use('/pokemon', pokemonRouter)
 app.use('/trainer', trainersRouter)
 
 
-//a test endpoint
 app.get('/', (req, res) => {
-  res.status(200)
-  res.send("Landing page")
-  //Auth0 handles login/signup - otherwise serve static content
+  res.status(200).send('Landing page')
 })
 
 // IMPLEMENT ERROR HANDLING - catch 404 and forward to error handler
@@ -74,5 +75,8 @@ server.listen(port, ()=>{
     });
     console.log("server running")
     console.log(`running on localhost:${port}`)
+    // populate.populateDB()
+    // console.log(dbo.getCollectionNames())
+    // console.log('populated database')
 })
 
