@@ -16,20 +16,17 @@ import Profile from "./pages/profile";
 import PlayerPokemon from "./pages/player-pokemon";
 import PlayerTeam from "./pages/player-team";
 import ErrorPage from "./pages/error-page";
+import LandingPage from "./pages/landing-page";
  
 const App = () => {
  return (
   <div>
     <div>
      <MainMenu class="hideme" />
-     <span class="landing">
-      <p>Welcome to Pokémon!</p> 
-      <p>Login or Sign Up Here</p>
-      <AuthenticationButton />
-     </span>
      </div>
      <div>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route path="home" element={<Home />} />
         <Route path="profile" element={<Profile />} />
         <Route path="mypokemon" element={<PlayerPokemon />} />
