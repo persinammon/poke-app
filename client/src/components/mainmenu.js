@@ -31,12 +31,10 @@ function MainMenu() {
         <DrawerContent>
           <DrawerHeader borderBottomWidth='1px'>Menu</DrawerHeader>
           <DrawerBody>
-            <NavLink to="/profile">Player Profile</NavLink><br />
             <NavLink to="/home">Home</NavLink><br />
+            <NavLink to="/profile">Player Profile</NavLink><br />
             <NavLink to="/trainer/<id>/pokemon">Pokemon</NavLink><br />
             <NavLink to="/trainer/<id>/teams">Teams</NavLink><br />
-            <NavLink to="/trainer/<id>/items">Items</NavLink><br />
-            <NavLink to="/trainer/<id>/tournaments">Tournaments</NavLink><br />
             <LogoutButton /><br />
             <DrawerCloseButton /><br />
           </DrawerBody>
