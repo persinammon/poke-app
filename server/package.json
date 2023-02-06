@@ -4,7 +4,9 @@
   "description": "Node.js app to play pokemon",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "devstart": "nodemon server.js",
+    "lint": "eslint routes/*.js db/*.js server.js --no-eslintrc"
   },
   "dependencies": {
     "body-parser": "^1.20.1",
@@ -13,8 +15,11 @@
     "express": "^4.18.2",
     "express-openid-connect": "^2.11.0",
     "mongodb": "^4.13.0",
-    "nodemon": "^2.0.20",
     "socket.io": "^4.5.4",
     "swagger-ui-express": "^4.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "nodemon": "^2.0.20"
   }
 }
