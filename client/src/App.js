@@ -32,6 +32,19 @@ const App = () => {
         <Route path="mypokemon" element={<PlayerPokemon />} />
         <Route path="myteams" element={<PlayerTeam />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route path="pokemon" element={<Invoices />}>
+          <Route path="all" element={} />
+          <Route path="all/:pageID" element={<Invoice />} />
+          <Route path=":pokemonID" element={<SentInvoices />} />
+        </Route>
+        <Route path="trainer" element={<Invoices />}>
+          <Route path=":trainerID" element={<Invoice />} />
+          <Route path=":trainerID/pokemon" element={<Invoice />} />
+        </Route>
+        <Route path="team" element={<Invoices />}>
+          <Route path=":teamID" element={} />
+          <Route path="create" element={<Invoice />} />
+        </Route>
       </Routes>
      </div>
   </div>
