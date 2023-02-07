@@ -14,7 +14,7 @@ create team rosters.
 - Webpack to bundle assets
 - [PokéAPI](https://pokeapi.co/)
 - Common middleware associated with Express.js (found in `server/package.json`)
-
+- Mocha and Chai test frameworks
 
 ### API
 
@@ -80,4 +80,6 @@ curl -d @test/testcase.json -H "Content-Type: application/json" http://localhost
 curl -v http://localhost:8000
 curl -v http://localhost:3000
 ```
+
+Run tests in `server/test` folder.
 
