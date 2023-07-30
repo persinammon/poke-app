@@ -3,7 +3,6 @@ const router = express.Router()
 const dbo = require("../db/conn");
 var cors = require('cors')
 
-
 router.get('/:trainerId', (req, res) => {
     res.end()
 })
