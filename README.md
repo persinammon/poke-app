@@ -12,7 +12,7 @@ I ran into an issue when deploying two services to the cloud (I tried both Amazo
 Google Cloud Platform). Both were saved as separate repositories with one image mapping to one repository.
 I was unable to use Docker-Compose to start up both instances in tandem, despite writing everything
 to successfully connect the database to the application on my local setup. I looked to Google forums and StackOverflow
-for previous run-ins with this issue, and was unable to find anything or solve it myself. I tried using [https://kompose.io/](Kompose)
+for previous run-ins with this issue, and was unable to find anything or solve it myself. I tried using [Kompose](https://kompose.io/]()
 to deploy services to Kubernetes.
 
 So, unfortunately I've had to move the old Dockerfiles and Docker compose YAML to a new folder and start anew.
