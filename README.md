@@ -3,6 +3,11 @@
 This web application allows users to sign up, create teams, and collaboratively
 create team rosters. 
 
+It is unfinished, but in the process I did cover (as in programmed) tutorials on how to set up a Node.js
+web application to a database backend, and used React for the front-end of the project.
+I decided to focus on different technical skills instead of fleshing out a good, unique app. 
+Below I wrote some run instructions and general things I used and issues I faced. 
+
 ### Issue Faced When Deploying 2 Services
 
 Originally, I structured the project as two Docker environments - one for the MongoDB database
