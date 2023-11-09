@@ -3,10 +3,11 @@
 This web application allows users to sign up, create teams, and collaboratively
 create team rosters. 
 
-It is unfinished, but in the process I did cover (as in programmed) tutorials on how to set up a Node.js
-web application to a database backend, and used React for the front-end of the project.
-I decided to focus on different technical skills instead of fleshing out a good, unique app. 
-Below I wrote some run instructions and general things I used and issues I faced. 
+It is unfinished. There was a working app with an OAuth login, a landing page, and a side menu bar from
+a React library. I also covered tutorials on how to set up a Node.js web application with a 
+Postgres/MongoDB back-end, as well as how to use Webpack, hot deployment, and React for front-end. I overscoped
+the initial project, and also decided to focus more on C++ and other projects, so I've left 
+my work as an example of a learning process.
 
 ### Issue Faced When Deploying 2 Services
 
