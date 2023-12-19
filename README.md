@@ -3,7 +3,7 @@
 This web application allows users to sign up, create teams, and collaboratively
 create team rosters. 
 
-It is unfinished. There was a working app with an OAuth login, a landing page, and a side menu bar from
+It is unfinished. There was a working app with an Auth0 login, a landing page, and a side menu bar from
 a React library. I also covered tutorials on how to set up a Node.js web application with a 
 Postgres/MongoDB back-end, as well as how to use Webpack, hot deployment, and React for front-end. I overscoped
 the initial project, and also decided to focus more on C++ and other projects, so I've left 
